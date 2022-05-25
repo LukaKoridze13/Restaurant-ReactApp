@@ -1,0 +1,13 @@
+.home{
+    background-color: #C5CBE3;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+
+}
+.slider{
+    margin: auto;
+    width: 67%;
+    margin-top: 30px;
+    border: 10px solid #4056A1
+}
