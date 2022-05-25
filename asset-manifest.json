@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/Restaurant-ReactApp/static/css/main.1daadd1c.css",
-    "main.js": "/Restaurant-ReactApp/static/js/main.a03d60f0.js",
-    "static/js/787.aab8bd84.chunk.js": "/Restaurant-ReactApp/static/js/787.aab8bd84.chunk.js",
-    "static/media/image2.jpg": "/Restaurant-ReactApp/static/media/image2.b3584b1645a94db5f069.jpg",
-    "static/media/image1.jpg": "/Restaurant-ReactApp/static/media/image1.4d09633a99a34ef3941d.jpg",
-    "static/media/image3.jpg": "/Restaurant-ReactApp/static/media/image3.e9f1e530aa123928322e.jpg",
-    "static/media/contact.png": "/Restaurant-ReactApp/static/media/contact.11e4dd92fc52fc4a6379.png",
-    "static/media/home.png": "/Restaurant-ReactApp/static/media/home.8b2a0690d130d58f6446.png",
-    "static/media/menu.png": "/Restaurant-ReactApp/static/media/menu.4237a972ebda95e45477.png",
-    "static/media/shopping-cart.png": "/Restaurant-ReactApp/static/media/shopping-cart.3f7578fad860baba992f.png",
-    "static/media/information.png": "/Restaurant-ReactApp/static/media/information.b1db19d23da0946b860f.png",
-    "index.html": "/Restaurant-ReactApp/index.html",
-    "main.1daadd1c.css.map": "/Restaurant-ReactApp/static/css/main.1daadd1c.css.map",
-    "main.a03d60f0.js.map": "/Restaurant-ReactApp/static/js/main.a03d60f0.js.map",
-    "787.aab8bd84.chunk.js.map": "/Restaurant-ReactApp/static/js/787.aab8bd84.chunk.js.map"
+    "main.css": "/static/css/main.f96cd740.css",
+    "main.js": "/static/js/main.0e2221b2.js",
+    "static/js/787.aab8bd84.chunk.js": "/static/js/787.aab8bd84.chunk.js",
+    "static/media/image2.jpg": "/static/media/image2.b3584b1645a94db5f069.jpg",
+    "static/media/image1.jpg": "/static/media/image1.4d09633a99a34ef3941d.jpg",
+    "static/media/image3.jpg": "/static/media/image3.e9f1e530aa123928322e.jpg",
+    "static/media/contact.png": "/static/media/contact.11e4dd92fc52fc4a6379.png",
+    "static/media/home.png": "/static/media/home.8b2a0690d130d58f6446.png",
+    "static/media/left-arrow.png": "/static/media/left-arrow.384b03658d157234a8bc.png",
+    "static/media/right-arrow.png": "/static/media/right-arrow.83aa956b4e6aa54236a0.png",
+    "static/media/menu.png": "/static/media/menu.4237a972ebda95e45477.png",
+    "static/media/shopping-cart.png": "/static/media/shopping-cart.3f7578fad860baba992f.png",
+    "static/media/information.png": "/static/media/information.b1db19d23da0946b860f.png",
+    "index.html": "/index.html",
+    "main.f96cd740.css.map": "/static/css/main.f96cd740.css.map",
+    "main.0e2221b2.js.map": "/static/js/main.0e2221b2.js.map",
+    "787.aab8bd84.chunk.js.map": "/static/js/787.aab8bd84.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1daadd1c.css",
-    "static/js/main.a03d60f0.js"
+    "static/css/main.f96cd740.css",
+    "static/js/main.0e2221b2.js"
   ]
 }
