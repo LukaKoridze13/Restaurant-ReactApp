@@ -107,7 +107,9 @@ function App() {
     setCoords([position.coords.longitude, position.coords.latitude])
   }
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(showPosition)
+    if(coords===!undefined || coords ===!null){
+      navigator.geolocation.getCurrentPosition(showPosition)
+    }
     window.localStorage.setItem('location',JSON.stringify(coords))
     window.localStorage.setItem('data', JSON.stringify(data))
     window.localStorage.setItem('cart', JSON.stringify(cartProducts))
