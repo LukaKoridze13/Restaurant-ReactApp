@@ -1,0 +1,7 @@
+.dropdownItem:hover {
+    background-color: none;
+    transform: scale(1.2);
+    background: none;
+    color: black !important;
+    font-weight: bold !important;
+}

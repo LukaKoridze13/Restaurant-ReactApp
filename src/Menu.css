@@ -1,0 +1,38 @@
+.menu {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #efe2ba;
+}
+
+.filter {
+    background-color: #efe2ba;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.displayCards {
+    background-color: #efe2ba;
+    width: 100%;
+    max-width: 1920px;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.row {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1920px;
+}
+
+.dropdown {
+    width: fit-content !important;
+}

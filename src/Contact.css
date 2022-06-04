@@ -1,0 +1,111 @@
+.contact3 h1,
+.contact3 h2,
+.contact3 h3,
+.contact3 h4,
+.contact3 h5,
+.contact3 h6 {
+    color: #3e4555;
+}
+
+.contact3 .font-weight-medium {
+    font-weight: 500;
+}
+
+.contact3 .card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.contact3 .btn-danger-gradiant {
+    background: #ff4d7e;
+    background: -webkit-linear-gradient(legacy-direction(to right), #ff4d7e 0%, #ff6a5b 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#ff4d7e), to(#ff6a5b));
+    background: -webkit-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+    background: -o-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+    background: linear-gradient(to right, #ff4d7e 0%, #ff6a5b 100%);
+}
+
+.contact3 .btn-danger-gradiant:hover {
+    background: #ff6a5b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #ff6a5b 0%, #ff4d7e 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#ff6a5b), to(#ff4d7e));
+    background: -webkit-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+    background: -o-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+    background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);
+}
+
+.contact3{
+    background-color: #C5CBE3;
+}
+.section3 {
+    max-width: 1920px;
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.address {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.section3 div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.info {
+    color: #d79922;
+    margin-left: 20px;
+
+}
+
+.imgdiv {
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border: #d79922 2px dashed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infodiv div {
+    transition: all 1s linear;
+}
+
+.infodiv p {
+    transition: all 1s linear;
+}
+
+.infodiv:hover div {
+    background-color: #E93656;
+    border: 2px #E93656 solid;
+}
+
+.infodiv:hover p {
+    color: #E93656;
+}
+@media (max-width:572px) {
+    .infodiv{
+        width: 200px;
+        margin: 0px;
+        margin-top:30px;
+    }
+    #address{
+        margin:0px;
+        margin-top: 30px;
+    }
+    .address{
+        margin: 0px;
+        margin-top: 30px;
+    }
+    .section3{
+        justify-content:center
+    }
+}

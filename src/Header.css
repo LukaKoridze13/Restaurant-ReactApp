@@ -1,4 +1,4 @@
-.header{
+.header {
     background-color: #4056A1;
     padding: 20px;
     display: flex;
@@ -6,7 +6,8 @@
     align-items: center;
     flex-wrap: wrap;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -14,28 +15,32 @@ nav{
     min-width: 558px;
     flex-wrap: wrap;
 }
-.homeicon{
+
+.homeicon {
     width: 30px;
 }
-.pageText{
+
+.pageText {
     color: #d79922;
     font-size: 20px;
     margin-left: 10px;
     font-weight: bold;
 }
-.cart{
+
+.cart {
     display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 30px;
-        padding-left: 30px;
-        margin-right: 30px;
-        position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: 30px;
+    position: relative;
 }
-.firstHome{
+
+.firstHome {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,33 +50,66 @@ nav{
     padding-right: 30px;
     padding-left: 30px;
 }
+
 .active div {
     background-color: #C5CBE3;
     border-radius: 20px
 }
-.badge{
+
+.badge {
     background-color: #d78922;
     position: absolute;
     top: -3px;
     right: -4px;
     border-radius: 50%;
-    font-size:13px
+    font-size: 13px
 }
-@media (max-width:689px) {
-    header {
-        justify-content: center;
-    }
-    .cart {
-        margin-top: 20px;
-    }
-    a{
-        margin: 0 auto;
-    }
-}
+
+
+
 @media (max-width:580px) {
     nav {
         min-width: 0px;
         width: 100%;
         flex-wrap: wrap;
     }
+}
+
+.rightside {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 970px) {
+    .rightside {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    nav {
+        width: 100%;
+    }
+}
+
+@media (max-width: 510px) {
+    .profile{
+        margin-top: 10px;
+    }
+}
+#nav-icon1 span:nth-child(3) {
+    height: 5px !important;
+    border-radius:50%;
+}
+#nav-icon1 span:nth-child(1) {
+    height: 5px !important;
+    border-radius: 50%
+}
+#nav-icon1 span:nth-child(2) {
+    height: 5px !important;
+    border-radius: 50%
+}
+#nav-icon1{
+    margin-left:20px
 }
