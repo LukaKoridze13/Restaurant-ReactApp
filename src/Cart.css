@@ -147,3 +147,21 @@
         margin: 0
     }
 }
+
+.inpPr {
+    background-color: #f13c20;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    width: 95px;
+    font-weight: bold;
+}
+
+.inpPr::placeholder {
+    color: white;
+    font-weight: bold;
+}
+.top div{
+    margin: 20px 20px;
+}

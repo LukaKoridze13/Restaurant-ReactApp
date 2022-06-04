@@ -2,15 +2,24 @@ import React, { useContext, useState } from 'react'
 import { Context } from './Context'
 import 'bootstrap/dist/css/bootstrap.css'
 import Swal from 'sweetalert2'
+import { OverlayTrigger,Tooltip } from 'react-bootstrap'
 export default function Profile() {
     let global = useContext(Context)
     const [state, setState] = useState('*********')
     const [text, setText] = useState('Show')
-    function promo(){
+    const [but, setBut] = useState('Click to copy!')
+    function promo() {
         if (global[22][6] !== null && global[22][6] !== undefined) {
-            return <p style={{ color: 'green', fontWeight: 'bold' }}>Promocode: {global[22][6]}</p>
+            return (<div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}><p style={{ color: 'green', fontWeight: 'bold' }}>Promocode: {global[22][6]}</p>
+                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{but}</Tooltip>}>
+                    <span className="d-inline-block">
+                        <button onClick={() => { navigator.clipboard.writeText(global[22][6]); but === 'Click to copy!' ? setBut('Copied!') : setBut('Click to copy!')  }} style={{ border: 'none', backgroundColor: '#F13c20', padding: '3px 10px', borderRadius: '30px', color: 'white', width: '53.51px' }}>Copy</button>
+                    </span>
+                </OverlayTrigger>
+            
+            </div>)
         } else {
-            return <p style={{color: 'red',fontWeight: 'bold'}}>You don't have active promocodes</p>
+            return <p style={{ color: 'red', fontWeight: 'bold' }}>You don't have active promocodes</p>
         }
     }
     return (
@@ -25,7 +34,7 @@ export default function Profile() {
                         {promo()}
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                             <p className="card-text">Password: {state} </p>
-                            <button style={{ border: 'none', backgroundColor: '#F13c20', padding: '3px 10px', borderRadius: '30px',color:'white', }} onClick={() => { if (state === '*********') { setState(`${global[22][4]}`); setText('Hide') } else { setState(`*********`); setText('Show') } }}>{text}</button>
+                            <button style={{ border: 'none', backgroundColor: '#F13c20', padding: '3px 10px', borderRadius: '30px', color: 'white', }} onClick={() => { if (state === '*********') { setState(`${global[22][4]}`); setText('Hide') } else { setState(`*********`); setText('Show') } }}>{text}</button>
                         </div>
                     </div>
                 </div>

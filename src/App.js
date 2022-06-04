@@ -16,6 +16,7 @@ import { useState, useEffect } from 'react'
 import LoginPage from './LoginPage';
 import Register from './Register';
 import Profile from './Profile';
+import OrderPage from './OrderPage';
 let link = require('./data.json')
 if (JSON.parse(window.localStorage.getItem('data')) === null) {
   window.localStorage.setItem('data', JSON.stringify(link))
@@ -36,6 +37,7 @@ function App() {
   const [logged,setLogged] = useState(JSON.parse(localStorage.getItem('signed')))
   const [user, setUser] = useState(JSON.parse(window.localStorage.getItem('currentUser')))
   const [rere, setRere] = useState(true)
+  const [coords, setCoords] = useState(JSON.parse(localStorage.getItem('location')))
   function set(e){
     setUser(e)
   }
@@ -49,6 +51,9 @@ function App() {
       setLogged('Login')
       window.localStorage.removeItem('currentUser')
     }
+  }
+  function setCoordsFunc(x,y){
+    setCoords([x,y])
   }
   function loginSubmit(){
     logged === "Login" ? setLogged("Log Out") : setLogged("Login")
@@ -98,7 +103,12 @@ function App() {
   function reset() {
     rere === false ? setRere(true) : setRere(false)
   }
+  function showPosition(position) {
+    setCoords([position.coords.longitude, position.coords.latitude])
+  }
   useEffect(() => {
+    navigator.geolocation.getCurrentPosition(showPosition)
+    window.localStorage.setItem('location',JSON.stringify(coords))
     window.localStorage.setItem('data', JSON.stringify(data))
     window.localStorage.setItem('cart', JSON.stringify(cartProducts))
     window.localStorage.setItem('num', JSON.stringify(number))
@@ -107,8 +117,8 @@ function App() {
     window.localStorage.setItem('signed', JSON.stringify(logged))
   })
   return (
-    <Context.Provider value={[number, addNB, data, cartProducts, fullPrice, addFP, plFB, mnFB, remNB, clNB, clFP, currency, stCR, reset, tmFB, mtFB,dt,calcFP,logged,login,loginSubmit,set,user]}> 
-    {/* sul 23 */}
+    <Context.Provider value={[number, addNB, data, cartProducts, fullPrice, addFP, plFB, mnFB, remNB, clNB, clFP, currency, stCR, reset, tmFB, mtFB,dt,calcFP,logged,login,loginSubmit,set,user,coords,setCoordsFunc]}> 
+    {/* sul 25 */}
       <div style={{ width: '100%', maxWidth: '1920px', margin: '0 auto', fontFamily: 'Akshar' }}>
         <Routes>
           <Route path="/Restaurant-ReactApp/" element={<Header />}>
@@ -121,6 +131,7 @@ function App() {
             <Route path='login' element={<LoginPage />} />
             <Route path='register' element={<Register />} />
             <Route path='profile' element={<Profile />} />
+            <Route path='orders' element={<OrderPage />} />
           </Route>
           <Route path='*' element={<Error />} />
         </Routes>

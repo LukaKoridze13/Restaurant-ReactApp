@@ -14,7 +14,7 @@ export default function Header() {
     let global = useContext(Context)
     let navigate = useNavigate()
     function account() {
-        if (global[18] === 'Log Out') {
+        if (global[18] === 'Log Out' && global[22]!==null) {
 
             return (
                 <div className='profile' style={{ display: 'flex', alignItems: 'center', padding: '10px', backgroundColor: '#d78922', borderRadius: '30px', cursor: 'pointer' }} onClick={() => { navigate('/Restaurant-ReactApp/profile')}}>
