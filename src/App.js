@@ -28,6 +28,10 @@ if (JSON.parse(window.localStorage.getItem('data')) === null) {
 if(JSON.parse(window.localStorage.getItem('signed'))=== null){
   window.localStorage.setItem('signed', JSON.stringify("Login"))
 }
+navigator.geolocation.getCurrentPosition(showPosition)
+function showPosition(position) {
+  window.localStorage.setItem('location', JSON.stringify([position.coords.longitude,position.coords.latitude]))
+}
 function App() {
   let [data, setData] = useState(JSON.parse(localStorage.getItem('data')))
   const [number, setNumber] = useState(JSON.parse(localStorage.getItem('num')));
@@ -103,13 +107,8 @@ function App() {
   function reset() {
     rere === false ? setRere(true) : setRere(false)
   }
-  function showPosition(position) {
-    setCoords([position.coords.longitude, position.coords.latitude])
-  }
+  
   useEffect(() => {
-    if(coords===!undefined || coords ===!null){
-      navigator.geolocation.getCurrentPosition(showPosition)
-    }
     window.localStorage.setItem('location',JSON.stringify(coords))
     window.localStorage.setItem('data', JSON.stringify(data))
     window.localStorage.setItem('cart', JSON.stringify(cartProducts))
